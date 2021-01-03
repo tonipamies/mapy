@@ -1,0 +1,12 @@
+language: generic
+dist: xenial
+cache: false
+services:
+  - docker
+git:
+  depth: false
+
+before_script:
+  - docker info
+
+script: make --debug=j build
