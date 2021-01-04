@@ -8,10 +8,12 @@ FROM ubuntu:xenial
 LABEL maintainer="toni@arboli.net"
 LABEL version="0.1"
 LABEL description="This is custom Docker Image for Molecule/Ansible CI"
+LABEL name="Ubuntu Xenial"
 #
 # RUN commands
 #
 RUN \
+    DEBIAN_FRONTEND=noninteractive \
     apt-get update -y && \
     apt-get install -y --no-install-recommends \
     apt-utils \
@@ -23,6 +25,7 @@ RUN \
     libssl-dev \
     sudo \
     ansible \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
 
 ENV SHELL /bin/bash

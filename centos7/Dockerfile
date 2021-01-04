@@ -8,6 +8,7 @@ FROM centos:7
 LABEL maintainer="toni@arboli.net"
 LABEL version="0.1"
 LABEL description="This is custom Docker Image for Molecule/Ansible CI"
+LABEL name="CentOS 7"
 #
 # RUN commands
 #

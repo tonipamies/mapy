@@ -13,6 +13,7 @@ LABEL name="Ubuntu Bionic"
 # RUN commands
 #
 RUN \
+    DEBIAN_FRONTEND=noninteractive \
     apt-get update -y && \
     apt-get install -y --no-install-recommends \
     apt-utils \

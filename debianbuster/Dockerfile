@@ -8,6 +8,7 @@ FROM debian:buster
 LABEL maintainer="toni@arboli.net"
 LABEL version="0.1"
 LABEL description="This is custom Docker Image for Molecule/Ansible CI"
+LABEL name="Debian Buster"
 #
 # RUN commands
 #
@@ -24,6 +25,7 @@ RUN \
     libssl-dev \
     sudo \
     ansible \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
 
 ENV SHELL /bin/bash
