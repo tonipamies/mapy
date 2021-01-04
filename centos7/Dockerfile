@@ -1,7 +1,7 @@
 #
-# Download base image centos 8
+# Download base image debian buster
 #
-FROM centos:8
+FROM centos:7
 #
 # LABEL about the custom image
 #
@@ -12,6 +12,7 @@ LABEL description="This is custom Docker Image for Molecule/Ansible CI"
 # RUN commands
 #
 RUN \
+    echo "skip_missing_names_on_install=False" >> /etc/yum.conf && \
     yum update -y && \
     yum install -y epel-release && \
     yum install -y \
@@ -21,13 +22,12 @@ RUN \
     nmap-ncat \
     bind-utils \
     openssl-devel \
-    python3 \
-    python3-devel \
-    python3-pip \
+    python \
+    python-devel \
+    python-pip \
     sudo \
     && \
-    ln -s /usr/bin/python3 /usr/bin/python && \
-    dnf clean all && \
-    rm -rf /var/cache/dnf/*
+    yum clean all && \
+    rm -rf /var/cache/yum/*
 
 ENV SHELL /bin/bash
