@@ -28,7 +28,7 @@ RUN \
     sudo \
     && \
     ln -s /usr/bin/python3 /usr/bin/python && \
-    dnf clean all && \
+    yum clean all && \
     rm -rf /var/cache/dnf/*
 
 ENV SHELL /bin/bash
