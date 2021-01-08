@@ -1,8 +1,14 @@
 #
-# Ignore Pin versions in apt-get
-# Ignore Pin versions in pip
+# Ignore DL3008 Pin versions in apt-get
+# Ignore DL3013 Pin versions in pip
+# Ignore DL3031 Do not use yum update
+# Ignore DL3033 Specify version with `yum install -y <package>-<version>`
+# Ignore DL3041 Specify version with `dnf install -y <package>-<version>`
 #
 ---
 ignored:
   - DL3008
   - DL3013
+  - DL3031
+  - DL3033
+  - DL3041

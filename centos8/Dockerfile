@@ -7,28 +7,19 @@ FROM centos:8
 #
 LABEL maintainer="toni@arboli.net"
 LABEL version="0.1"
-LABEL description="This is custom Docker Image for Molecule/Ansible CI"
+LABEL description="This is custom Docker Image for run Molecule/Ansible CI tests"
 LABEL name="CentOS 8"
 #
 # RUN commands
 #
 RUN \
-    yum update -y && \
-    yum install -y epel-release && \
-    yum install -y \
-    ansible \
-    gcc \
-    git \
-    nmap-ncat \
-    bind-utils \
-    openssl-devel \
+    dnf install -y --setopt=tsflags=nodocs \
     python3 \
-    python3-devel \
+    python3-setuptools \
     python3-pip \
-    sudo \
     && \
-    ln -s /usr/bin/python3 /usr/bin/python && \
-    yum clean all && \
-    rm -rf /var/cache/dnf/*
+    dnf clean all
+RUN pip3 install --upgrade pip && \
+    pip3 install --no-cache-dir ansible molecule[docker] ansible-lint flake8 molecule-docker docker
 
 ENV SHELL /bin/bash
