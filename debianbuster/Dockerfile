@@ -7,7 +7,7 @@ FROM debian:buster
 #
 LABEL maintainer="toni@arboli.net"
 LABEL version="0.1"
-LABEL description="This is custom Docker Image for Molecule/Ansible CI"
+LABEL description="This is custom Docker Image for run Molecule/Ansible CI tests"
 LABEL name="Debian Buster"
 #
 # RUN commands
@@ -17,15 +17,10 @@ RUN \
     apt-get update -y && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends \
-    apt-utils \
-    gcc \
-    git \
-    python3 \
-    python3-dev \
+    python3-minimal \
     python3-pip \
-    libssl-dev \
-    sudo \
-    ansible \
+    docker \
+    pip3 install ansible molecule[docker] ansible-lint flake8 molecule-docker docker \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 
