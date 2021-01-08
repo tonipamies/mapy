@@ -1,6 +1,8 @@
 #
-#
+# Ignore Pin versions in apt-get
+# Ignore Pin versions in pip
 #
 ---
 ignored:
   - DL3008
+  - DL3013
