@@ -1,7 +1,7 @@
 #
 # Download base image
 #
-FROM ubuntu:focal
+FROM ubuntu:rolling
 #
 # LABEL about the custom image
 #
