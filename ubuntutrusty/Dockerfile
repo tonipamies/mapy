@@ -1,7 +1,7 @@
 #
 # Download base image
 #
-FROM ubuntu:trusty
+FROM ubuntu:trusty-20190425
 #
 # LABEL about the custom image
 #
