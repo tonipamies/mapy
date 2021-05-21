@@ -1,7 +1,7 @@
 #
 # Download base image
 #
-FROM ubuntu:focal
+FROM ubuntu:groovy-20210416
 #
 # LABEL about the custom image
 #
