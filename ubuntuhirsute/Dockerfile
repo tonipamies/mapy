@@ -1,7 +1,7 @@
 #
 # Download base image
 #
-FROM ubuntu:hirsute
+FROM ubuntu:21.04
 #
 # LABEL about the custom image
 #
