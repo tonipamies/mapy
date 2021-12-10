@@ -1,7 +1,7 @@
 #
 # Download base image
 #
-FROM ubuntu:hirsute
+FROM ubuntu:impish-20211102
 #
 # LABEL about the custom image
 #
