@@ -1,7 +1,7 @@
 #
 # Download base image
 #
-FROM ubuntu:hirsute
+FROM ubuntu:rolling
 #
 # LABEL about the custom image
 #
