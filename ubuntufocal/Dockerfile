@@ -1,7 +1,7 @@
 #
 # Download base image
 #
-FROM ubuntu:focal
+FROM ubuntu:20.04
 #
 # LABEL about the custom image
 #
