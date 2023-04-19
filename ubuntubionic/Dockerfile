@@ -1,7 +1,7 @@
 #
 # Download base image
 #
-FROM ubuntu:bionic
+FROM ubuntu:18.04
 #
 # LABEL about the custom image
 #
