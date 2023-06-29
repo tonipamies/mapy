@@ -1,7 +1,7 @@
 #
 # Download base image
 #
-FROM ubuntu:xenial
+FROM ubuntu:xenial-20210416
 #
 # LABEL about the custom image
 #
